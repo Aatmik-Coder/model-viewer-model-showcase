@@ -5,19 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <!-- New link added -->
-  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/css/vendor/font-awesome.css">
-  <link rel="stylesheet" href="../assets/css/vendor/odometer-theme-default.css">
-  <link rel="stylesheet" href="../assets/css/vendor/slick.css">
-  <link rel="stylesheet" href="../assets/css/vendor/slick-theme.css">
-  <link rel="stylesheet" href="../assets/css/app.css">
-  <link rel="stylesheet" href="../assets/css/new_css.css">
   <script type="module" src="https://unpkg.com/@google/model-viewer@2.1.1/dist/model-viewer.min.js"></script>
   <title>Document</title>
   <style>
@@ -91,8 +78,8 @@
 <body>
   <div id="main-wrapper" class="main main-wrapper">
     <!--=====================================-->
-    <model-viewer src="../assets/TVModel.glb" disable-tap ar ar-button camera-controls touch-action="pan-y"
-      ar-modes="scene-viewer webxr quick-look" poster="../assets/TVModel.png" shadow-intensity="1">
+    <model-viewer src="assets/TVModel.glb" disable-tap ar ar-button camera-controls touch-action="pan-y"
+      ar-modes="scene-viewer webxr quick-look" poster="assets/TVModel.png" shadow-intensity="1">
       <button slot="ar-button" id="ar-button">
         View in your space
       </button>
@@ -101,36 +88,36 @@
     <div class="slider">
       <div class="slides">
         <button class="slide selected" onclick="switchSrc(this, 'TVModel')"
-          style="background-image: url('../assets/TVModel.png');"></button>
+          style="background-image: url('assets/TVModel.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'wall_painting')"
-          style="background-image: url('../assets/wall_painting.png');"></button>
+          style="background-image: url('assets/wall_painting.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'book_shelf')"
-          style="background-image: url('../assets/book_shelf.png');"></button>
+          style="background-image: url('assets/book_shelf.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'washing_machine')"
-          style="background-image: url('../assets/washing_machine.png');"></button>
+          style="background-image: url('assets/washing_machine.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'wall_clock')"
-          style="background-image: url('../assets/wall_clock.png');"></button>
+          style="background-image: url('assets/wall_clock.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'table')"
-          style="background-image: url('../assets/table.png');"></button>
+          style="background-image: url('assets/table.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'Sofa')"
-          style="background-image: url('../assets/Sofa.png');"></button>
+          style="background-image: url('assets/Sofa.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'gas_stove')"
-          style="background-image: url('../assets/gas_stove.png');"></button>
+          style="background-image: url('assets/gas_stove.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'microwave')"
-          style="background-image: url('../assets/microwave.png');"></button>
+          style="background-image: url('assets/microwave.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'fridge_red')"
-          style="background-image: url('../assets/fridge_red.png');"></button>
+          style="background-image: url('assets/fridge_red.png');"></button>
         <button class="slide" onclick="switchSrc(this, 'fridge_blue')"
-          style="background-image: url('../assets/fridge_blue.png');"></button>
+          style="background-image: url('assets/fridge_blue.png');"></button>
       </div>
     </div>
   </div>
 
   <!-- New script added -->
-  <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="../assets/js/vendor/bootstrap.min.js"></script>
-  <script src="../assets/js/app.js"></script>
-  <script>
+  <!-- <script src="assets/js/vendor/jquery-3.6.0.min.js"></script> -->
+  <!-- <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/app.js"></script> -->
+  <!-- <script>
     function show() { 
       if(document.getElementById('ig').style.display == "none"){
         document.getElementById('ig').style.display = "inline";
@@ -159,14 +146,14 @@
       document.addEventListener('contextmenu', event => event.preventDefault());
     }, 1000);
 
-  </script>
+  </script> -->
 </body>
 <script type="module">
 
   const modelViewer = document.querySelector('model-viewer');
 
   window.switchSrc = (element, name) => {
-    const base = '../assets/' + name;
+    const base = 'assets/' + name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.png';
     modelViewer.removeAttribute('ar-placement');
@@ -181,7 +168,7 @@
 </script>
 <style>
   #ar-button {
-    background-image: url(../assets/ar.png);
+    background-image: url(assets/ar.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 12px 50%;
